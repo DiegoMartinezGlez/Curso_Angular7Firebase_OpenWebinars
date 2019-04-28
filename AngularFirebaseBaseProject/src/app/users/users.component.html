@@ -1,0 +1,29 @@
+<div class="sectionDiv">
+  <h1>Users</h1>
+
+  <br/><br/>
+
+  <table class="table">
+    <thead>
+      <tr>
+      <th scope="col">Email</th>
+      <th scope="col">Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+    
+      <tr *ngFor="let user of users">
+        <td>
+          {{ user.email }}
+        </td>
+        <td>
+          <button (click)="db.removeUser(user.key)">
+              BORRAR
+          </button>
+        </td>
+      </tr>
+    
+    </tbody>
+  </table>
+
+</div>
